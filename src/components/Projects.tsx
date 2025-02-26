@@ -1,26 +1,27 @@
+
 import { Card, CardContent } from "./ui/card";
 
 const projects = [
   {
-    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742",
-    title: "Modern Office Complex",
-    location: "Downtown District",
-  },
-  {
     image: "https://images.unsplash.com/photo-1524230572899-a752b3835840",
-    title: "Luxury Apartments",
-    location: "Riverside Heights",
+    title: "Modern ADU",
+    location: "Backyard Guest House",
   },
   {
     image: "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace",
-    title: "Commercial Center",
-    location: "Business Park",
+    title: "Custom Deck Installation",
+    location: "Elevated Outdoor Living Space",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742",
+    title: "Full Home Renovation",
+    location: "Interior & Exterior Transformation",
   },
 ];
 
 export const Projects = () => {
   return (
-    <section className="py-20">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Projects</h2>
         <div className="grid md:grid-cols-3 gap-8">

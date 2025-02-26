@@ -1,7 +1,12 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Hero = () => {
+  const scrollToContact = () => {
+    document.querySelector('#contact-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="relative min-h-[80vh] flex items-center">
       <div
@@ -12,19 +17,23 @@ export const Hero = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
       
       <div className="container relative z-10 mx-auto px-4">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-up">
-            Building Tomorrow's Landmarks Today
+            Dreaming of Your Perfect Home? Let's Build It Together!
           </h1>
           <p className="text-xl text-white/90 mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            NorthWorks Construction delivers excellence in commercial and residential construction with over 25 years of expertise.
+            Quality craftsmanship and reliable service for every project.
           </p>
-          <Button className="bg-accent hover:bg-accent/90 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-            Explore Our Projects <ArrowRight className="ml-2 h-4 w-4" />
+          <Button 
+            onClick={scrollToContact}
+            className="bg-accent hover:bg-accent/90 animate-fade-up" 
+            style={{ animationDelay: "0.4s" }}
+          >
+            Get a Free Consultation <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
       </div>

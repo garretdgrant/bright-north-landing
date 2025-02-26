@@ -1,30 +1,46 @@
-import { Building2, HardHat, Construction } from "lucide-react";
+
+import { Building2, Home, Construction, Hammer, PaintBucket, Wrench } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 const services = [
   {
     icon: Building2,
-    title: "Commercial Construction",
-    description: "State-of-the-art commercial buildings and office spaces built to last.",
+    title: "Custom Homes & ADUs",
+    description: "Expert craftsmanship in building your dream home or accessory dwelling unit, tailored to your unique vision.",
   },
   {
     icon: Construction,
-    title: "Residential Projects",
-    description: "Custom homes and residential developments with attention to detail.",
+    title: "Home Additions & Renovations",
+    description: "Transform your space with professional home additions and comprehensive renovation services.",
   },
   {
-    icon: HardHat,
-    title: "Project Management",
-    description: "Expert oversight ensuring projects are delivered on time and within budget.",
+    icon: Home,
+    title: "Decks, Sheds & Outdoor Structures",
+    description: "Create the perfect outdoor living space with custom-built decks, sheds, and structures.",
+  },
+  {
+    icon: Hammer,
+    title: "Concrete Work & Foundations",
+    description: "Strong foundations and expert concrete work for lasting durability and quality.",
+  },
+  {
+    icon: PaintBucket,
+    title: "Siding Installation & Repair",
+    description: "Protect and beautify your home with professional siding services and repairs.",
+  },
+  {
+    icon: Wrench,
+    title: "Interior Remodeling & Plumbing",
+    description: "Complete interior renovations and plumbing solutions for your home improvement needs.",
   },
 ];
 
 export const Services = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-stone-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary">Our Services</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardHeader>
