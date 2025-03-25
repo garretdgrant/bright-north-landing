@@ -19,7 +19,7 @@ export const Contact = () => {
   return (
     <section id="contact-section" className="py-20 bg-stone-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-primary">Let's Build Something Amazing</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-primary">Let's Transform Your Home</h2>
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -36,7 +36,7 @@ export const Contact = () => {
                 <Textarea placeholder="Your Message" className="w-full min-h-[150px]" required />
               </div>
               <Button type="submit" className="w-full bg-accent hover:bg-accent/90">
-                Let's Build Something Amazing – Contact Us Today!
+                Contact Us Today For Your Free Consultation
               </Button>
             </form>
           </div>
@@ -45,27 +45,27 @@ export const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent" />
-                <a href="tel:916-990-3689" className="hover:text-accent">916-990-3689</a>
+                <a href="tel:555-123-4567" className="hover:text-accent">555-123-4567</a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-accent" />
-                <a href="mailto:dustin@northworks.org" className="hover:text-accent">dustin@northworks.org</a>
+                <a href="mailto:info@ogdenconstruction.com" className="hover:text-accent">info@ogdenconstruction.com</a>
               </div>
               <div className="flex items-center space-x-3">
                 <Facebook className="h-5 w-5 text-accent" />
-                <a href="https://facebook.com/northworksconstruction" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
-                  North Works Construction
+                <a href="https://facebook.com/ogdenconstruction" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+                  Ogden Construction Inc
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Instagram className="h-5 w-5 text-accent" />
-                <a href="https://instagram.com/northworksconstruction" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
-                  @northworksconstruction
+                <a href="https://instagram.com/ogdenconstruction" target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+                  @ogdenconstruction
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Hammer className="h-5 w-5 text-accent" />
-                <span>Contractor License #: 1124581</span>
+                <span>Serving Placerville, CA and surrounding communities</span>
               </div>
             </div>
           </div>

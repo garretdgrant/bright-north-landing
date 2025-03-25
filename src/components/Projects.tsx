@@ -3,19 +3,19 @@ import { Card, CardContent } from "./ui/card";
 
 const projects = [
   {
-    image: "https://images.unsplash.com/photo-1524230572899-a752b3835840",
-    title: "Modern ADU",
-    location: "Backyard Guest House",
+    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+    title: "Modern Kitchen Remodel",
+    location: "Placerville, CA",
   },
   {
-    image: "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace",
-    title: "Custom Deck Installation",
-    location: "Elevated Outdoor Living Space",
+    image: "https://images.unsplash.com/photo-1582579252994-24c94bc74ce2",
+    title: "Complete Home Renovation",
+    location: "El Dorado County",
   },
   {
-    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742",
-    title: "Full Home Renovation",
-    location: "Interior & Exterior Transformation",
+    image: "https://images.unsplash.com/photo-1574643156929-51fa098b0394",
+    title: "Bathroom Transformation",
+    location: "Placerville, CA",
   },
 ];
 

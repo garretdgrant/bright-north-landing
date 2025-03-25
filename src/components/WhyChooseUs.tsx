@@ -3,10 +3,10 @@ import { Check } from "lucide-react";
 import { Card } from "./ui/card";
 
 const reasons = [
-  "Custom designs tailored to your lifestyle",
-  "High-quality craftsmanship",
-  "Clear communication every step of the way",
-  "Projects completed on time and within budget"
+  "From the first nail to the final creative touches, we transform your home",
+  "Top-rated construction service provider in Placerville and surrounding areas",
+  "Modern, unique, and comfortable living spaces tailored to your lifestyle",
+  "Professional crew dedicated to quality and customer satisfaction"
 ];
 
 export const WhyChooseUs = () => {

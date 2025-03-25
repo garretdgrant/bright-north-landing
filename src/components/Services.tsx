@@ -1,37 +1,37 @@
 
-import { Building2, Home, Construction, Hammer, PaintBucket, Wrench } from "lucide-react";
+import { Home, Hammer, PaintBucket, Construction, Kitchen, Wrench } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 const services = [
   {
-    icon: Building2,
-    title: "Custom Homes & ADUs",
-    description: "Expert craftsmanship in building your dream home or accessory dwelling unit, tailored to your unique vision.",
+    icon: Home,
+    title: "Home Remodeling",
+    description: "Transform your living space with our comprehensive home remodeling services, tailored to your lifestyle and preferences.",
   },
   {
     icon: Construction,
-    title: "Home Additions & Renovations",
-    description: "Transform your space with professional home additions and comprehensive renovation services.",
+    title: "Home Renovations",
+    description: "Revitalize your home with our expert renovation services that blend modern design with functional living spaces.",
   },
   {
-    icon: Home,
-    title: "Decks, Sheds & Outdoor Structures",
-    description: "Create the perfect outdoor living space with custom-built decks, sheds, and structures.",
+    icon: Kitchen,
+    title: "Kitchen Remodeling",
+    description: "Create the kitchen of your dreams with custom designs, quality materials, and expert craftsmanship.",
   },
   {
     icon: Hammer,
-    title: "Concrete Work & Foundations",
-    description: "Strong foundations and expert concrete work for lasting durability and quality.",
+    title: "Bathroom Renovations",
+    description: "Update your bathrooms with modern fixtures, elegant finishes, and space-efficient designs.",
   },
   {
     icon: PaintBucket,
-    title: "Siding Installation & Repair",
-    description: "Protect and beautify your home with professional siding services and repairs.",
+    title: "Interior & Exterior Painting",
+    description: "Refresh your home's appearance with our professional painting services for both interior and exterior surfaces.",
   },
   {
     icon: Wrench,
-    title: "Interior Remodeling & Plumbing",
-    description: "Complete interior renovations and plumbing solutions for your home improvement needs.",
+    title: "General Contracting",
+    description: "Comprehensive contracting services for all your residential construction and improvement needs.",
   },
 ];
 

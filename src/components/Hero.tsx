@@ -23,10 +23,10 @@ export const Hero = () => {
       <div className="container relative z-10 mx-auto px-4">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-up">
-            Dreaming of Your Perfect Home? Let's Build It Together!
+            Transform Your Home Into A Modern, Unique Space
           </h1>
           <p className="text-xl text-white/90 mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Quality craftsmanship and reliable service for every project.
+            Top-rated construction services in Placerville, CA and surrounding communities.
           </p>
           <Button 
             onClick={scrollToContact}
