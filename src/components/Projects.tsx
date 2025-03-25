@@ -8,12 +8,12 @@ const projects = [
     location: "Placerville, CA",
   },
   {
-    image: "https://images.unsplash.com/photo-1582579252994-24c94bc74ce2",
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
     title: "Complete Home Renovation",
     location: "El Dorado County",
   },
   {
-    image: "https://images.unsplash.com/photo-1574643156929-51fa098b0394",
+    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a",
     title: "Bathroom Transformation",
     location: "Placerville, CA",
   },
