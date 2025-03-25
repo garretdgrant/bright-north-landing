@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   const scrollToContact = () => {
@@ -23,18 +24,24 @@ export const Hero = () => {
       <div className="container relative z-10 mx-auto px-4">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-up">
-            Transform Your Home Into A Modern, Unique Space
+            Reliable Remodeling in Placerville, CA
           </h1>
           <p className="text-xl text-white/90 mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Top-rated construction services in Placerville, CA and surrounding communities.
+            Craftsmanship you can count on. From kitchens to custom builds, we bring your vision to life.
           </p>
-          <Button 
-            onClick={scrollToContact}
-            className="bg-accent hover:bg-accent/90 animate-fade-up" 
-            style={{ animationDelay: "0.4s" }}
-          >
-            Get a Free Consultation <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <div className="space-x-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+            <Button 
+              onClick={scrollToContact}
+              className="bg-accent hover:bg-accent/90" 
+            >
+              Get a Free Consultation <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            <Link to="/contact">
+              <Button variant="outline" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
+                Request a Quote
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
