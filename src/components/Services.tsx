@@ -1,5 +1,5 @@
 
-import { Home, Hammer, PaintBucket, Construction, Kitchen, Wrench } from "lucide-react";
+import { Home, Hammer, PaintBucket, Construction, Wrench, LayoutList } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 const services = [
@@ -14,7 +14,7 @@ const services = [
     description: "Revitalize your home with our expert renovation services that blend modern design with functional living spaces.",
   },
   {
-    icon: Kitchen,
+    icon: LayoutList,
     title: "Kitchen Remodeling",
     description: "Create the kitchen of your dreams with custom designs, quality materials, and expert craftsmanship.",
   },
