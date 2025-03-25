@@ -1,9 +1,17 @@
 
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, Hammer, Image, Users, Phone } from "lucide-react";
+import { Home, Hammer, Image, Users, Phone, Menu, X } from "lucide-react";
+import { 
+  Sheet, 
+  SheetContent, 
+  SheetTrigger,
+  SheetClose 
+} from "@/components/ui/sheet";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
 
   const isActive = (path: string) => {
     return location.pathname === path ? "text-accent font-semibold" : "";
@@ -14,11 +22,61 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div className="flex items-center mb-4 md:mb-0">
-              <Hammer className="h-7 w-7 text-accent mr-2" />
-              <Link to="/" className="text-xl font-bold text-primary">Ogden Construction Inc</Link>
+            <div className="flex items-center justify-between mb-4 md:mb-0">
+              <div className="flex items-center">
+                <Hammer className="h-7 w-7 text-accent mr-2" />
+                <Link to="/" className="text-xl font-bold text-primary">Ogden Construction Inc</Link>
+              </div>
+              
+              {/* Mobile Menu Toggle */}
+              <div className="md:hidden">
+                <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                  <SheetTrigger asChild>
+                    <button className="p-2 focus:outline-none">
+                      <Menu className="h-6 w-6 text-primary" />
+                      <span className="sr-only">Open menu</span>
+                    </button>
+                  </SheetTrigger>
+                  <SheetContent side="right" className="bg-white w-[250px] pt-12">
+                    <nav className="flex flex-col space-y-6">
+                      <SheetClose asChild>
+                        <Link to="/" className={`flex items-center space-x-3 hover:text-accent ${isActive("/")}`}>
+                          <Home className="h-5 w-5" />
+                          <span className="text-lg">Home</span>
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="/services" className={`flex items-center space-x-3 hover:text-accent ${isActive("/services")}`}>
+                          <Hammer className="h-5 w-5" />
+                          <span className="text-lg">Services</span>
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="/portfolio" className={`flex items-center space-x-3 hover:text-accent ${isActive("/portfolio")}`}>
+                          <Image className="h-5 w-5" />
+                          <span className="text-lg">Portfolio</span>
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="/about" className={`flex items-center space-x-3 hover:text-accent ${isActive("/about")}`}>
+                          <Users className="h-5 w-5" />
+                          <span className="text-lg">About</span>
+                        </Link>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <Link to="/contact" className={`flex items-center space-x-3 hover:text-accent ${isActive("/contact")}`}>
+                          <Phone className="h-5 w-5" />
+                          <span className="text-lg">Contact</span>
+                        </Link>
+                      </SheetClose>
+                    </nav>
+                  </SheetContent>
+                </Sheet>
+              </div>
             </div>
-            <nav className="flex items-center space-x-8">
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
               <Link to="/" className={`flex items-center space-x-1 hover:text-accent ${isActive("/")}`}>
                 <Home className="h-4 w-4" />
                 <span>Home</span>
