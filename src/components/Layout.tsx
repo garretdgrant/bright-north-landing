@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, Hammer, Image, Users, Phone, Menu, X } from "lucide-react";
@@ -128,8 +127,26 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               <p>Sunday: Closed</p>
             </div>
           </div>
-          <div className="border-t border-white/20 mt-8 pt-8 text-center">
-            <p>&copy; {new Date().getFullYear()} Ogden Construction Inc. All rights reserved.</p>
+          <div className="border-t border-white/20 mt-8 pt-8 text-center flex flex-col items-center">
+            <p className="mb-4">&copy; {new Date().getFullYear()} Ogden Construction Inc. All rights reserved.</p>
+            <div className="flex items-center space-x-4">
+              <img 
+                src="/placeholder.svg" 
+                alt="EDC Web Design Logo" 
+                className="h-8 w-auto opacity-70 grayscale" 
+              />
+              <p>
+                Designed by{' '}
+                <a 
+                  href="https://edcwebdesigns.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="underline hover:text-accent transition-colors"
+                >
+                  EDC Web Design
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </footer>
