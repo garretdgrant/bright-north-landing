@@ -1,20 +1,46 @@
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, Hammer, Image, Users, Phone, Menu, X } from "lucide-react";
+import { Home, Hammer, Image, Users, Phone, Menu, X, MapPin } from "lucide-react";
 import { 
   Sheet, 
   SheetContent, 
   SheetTrigger,
   SheetClose 
 } from "@/components/ui/sheet";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   const isActive = (path: string) => {
     return location.pathname === path ? "text-accent font-semibold" : "";
   };
+
+  const locations = [
+    "Placerville",
+    "El Dorado Hills", 
+    "Cameron Park", 
+    "Folsom", 
+    "Tahoe"
+  ];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -62,6 +88,24 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                           <span className="text-lg">About</span>
                         </Link>
                       </SheetClose>
+                      {/* Mobile Locations Dropdown */}
+                      <div className="relative">
+                        <div className="flex items-center space-x-3 cursor-pointer">
+                          <MapPin className="h-5 w-5" />
+                          <span className="text-lg">Locations</span>
+                        </div>
+                        <div className="pl-8 mt-2 flex flex-col space-y-2">
+                          {locations.map((location) => (
+                            <Link 
+                              key={location} 
+                              to="#" 
+                              className="text-primary/80 hover:text-accent transition-colors text-base py-1"
+                            >
+                              {location}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
                       <SheetClose asChild>
                         <Link to="/contact" className={`flex items-center space-x-3 hover:text-accent ${isActive("/contact")}`}>
                           <Phone className="h-5 w-5" />
@@ -92,6 +136,25 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Users className="h-4 w-4" />
                 <span>About</span>
               </Link>
+              {/* Desktop Locations Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center space-x-1 hover:text-accent focus:outline-none">
+                  <MapPin className="h-4 w-4" />
+                  <span>Locations</span>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-[#fafaf9] border border-gray-100 shadow-md rounded-md py-2 mt-1 min-w-[160px]">
+                  {locations.map((location) => (
+                    <DropdownMenuItem key={location} asChild>
+                      <Link 
+                        to="#" 
+                        className="px-4 py-2 text-sm text-primary hover:bg-accent/10 hover:text-accent transition-colors"
+                      >
+                        {location}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
               <Link to="/contact" className={`flex items-center space-x-1 hover:text-accent ${isActive("/contact")}`}>
                 <Phone className="h-4 w-4" />
                 <span>Contact</span>
